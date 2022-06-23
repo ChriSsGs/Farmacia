@@ -30,12 +30,14 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" class="navbar-nav d-lg-none" href="#">Hidden brand</a>
+                    <a class="navbar-brand" class="navbar-nav d-lg-none" href="#">
+                    <img src="logo2.png" alt="" width="50" height="50">
+                    </a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" class="navbar-nav d-lg-none" href="#">Inicio<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" class="navbar-nav d-lg-none" href="#">Inicio<span class="sr-only"></span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item"> 
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
                         <li class="nav-item">
@@ -44,7 +46,7 @@
                     </ul>
                     <ul class="nav navbar-nav justify-content-end nav-top">
                         <li class="nav-item">
-                            <a href="/resources/views/login/index.blade.php" id="" class="nav-link">
+                            <a href="resources/views/login/index.php" id="" class="nav-link">
                                 <i class="bi bi-person-circle"></i> Iniciar sesión
                             </a>
                         </li>
