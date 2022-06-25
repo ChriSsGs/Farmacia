@@ -116,7 +116,7 @@
                                                 <input class="form-check-input" type="checkbox" value="" name="recuerdame" id="recuerdame" checked />
                                                 <label class="form-check-label" for=""> Recuérdame</label>
                                             </div>
-                                            <a href="#" class="text-success">Olvidé la contraseña</a>
+                                            <!-- <a href="#" class="text-success">Olvidé la contraseña</a> -->
                                         </div>
 
                                         <!-- Submit button -->
