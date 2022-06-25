@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nosotros</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
@@ -16,7 +15,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
     <!-- Nav Bar -->
     <div class="fixed-top">
@@ -57,38 +55,44 @@
         </nav>
     </div>
     <!-- Fin de Nav Bar -->
-    <div class="jumbotron text-center mt-5">
-        <h1>Tu Farmacia</h1>
-        <p>Estamos al alcance de todos los peruanos</p>
-    </div>
-
-    <div class="container">
-        <div class="card-deck m-5">
-            <div class="card">
-                <img class="card-img-top" src="" alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Misión</h5>
-                    <p class="card-text">Desarrollar el mercado de medicamentos individualizados de alta calidad, innovando opciones terapéuticas con los prescriptores.
+    
+    <!-- Termina la definición del menú -->
+        <main role="main" class="container" style="margin-top: 6rem;">
+            <div class="card card-default card-body bg-light">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Formulario de Contacto</h2>
+                    </div>
+                    <div class="col-12">
+                        <form method="POST" action="contacto.php">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input name="nombre" required type="text" id="nombre"
+                                    class="form-control" placeholder="Ingresa tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo electrónico</label>
+                                <input name="correo" required type="email" id="correo"
+                                    class="form-control" placeholder="Ingresa tu correo electrónico">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea required placeholder="Escribe tu mensaje"
+                                    class="form-control" name="mensaje" id="mensaje"
+                                    cols="30" rows="4"></textarea>
+                            </div>
+                            <div class="form-group mb-0">
+                                <button class="btn-success btn" type="submit">
+                                    Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Visión</h5>
-                    <p class="card-text">Ser líder en Perú y Latinoamérica en brindar tratamietos con medicamentos individualizados de alta calidad.
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Valores</h5>
-                    <p class="card-text">Buscamos que nuestros colaboradores desarrollen: Orientación al Cliente, Integridad, Calidad, Innovación y Pasión.
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer -->
-    <footer>
+        </main>
+        <!-- Footer -->
+        <footer>
             <div class="container ">
                 <hr>
                 <div class="row ">
@@ -98,5 +102,5 @@
                 </div>
             </div>
         </footer>
-</body>
-</html>
+    </body>
+    </html>

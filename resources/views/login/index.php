@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -78,64 +76,123 @@
             </div>
         </nav>
     </div>
-    
+
     <section class="vh-100">
         <div class="container pt-5 h-100 mt-10">
             <div class="row d-flex align-items-center justify-content-center h-100">
-                <div class="col-md-8 col-lg-7 col-xl-6">
+                <div class="col-xl-7 col-lg-7 col-md-6">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
                 </div>
-                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                    <div class="mb-4">
-                        <h2 class="text-center">¡Bienvenido!</h2>
-                    </div>
-                    <!-- Formulario  -->
-                    <form>
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="correo">Correo</label>
-                            <input type="email" id="correo" name="correo" class="form-control form-control-lg" />
-                        </div>
+                <div class="col-xl-5 col-lg-5 col-md-6">
+                    <div class="card card-default card-body">
+                        <ul id="tabsJustified" class="nav nav-tabs nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" data-target="#tab1" data-toggle="tab">Inicio de sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-target="#tab2" data-toggle="tab">Registro</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div id="tabsJustifiedContent" class="tab-content">
+                            <!-- Inicio de sesion -->
+                            <div class="tab-pane active" id="tab1">
+                                <div class="col">
+                                    <!-- Formulario  -->
+                                    <form>
+                                        <!-- Email -->
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="correo">Correo</label>
+                                            <input type="email" id="correo" name="correo" class="form-control" placeholder="Ingresa tu correo" required/>
+                                        </div>
+                                        <!-- Password -->
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="palabraSecreta">Contraseña</label>
+                                            <input type="password" id="palabraSecreta" name="palabraSecreta" class="form-control" placeholder="Ingresa tu contraseña" required/>
+                                        </div>
+                                        <div class="d-flex justify-content-around align-items-center mb-4">
+                                            <!-- Checkbox -->
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" name="recuerdame" id="recuerdame" checked />
+                                                <label class="form-check-label" for=""> Recuérdame</label>
+                                            </div>
+                                            <a href="#" class="text-success">Olvidé la contraseña</a>
+                                        </div>
 
-                        <!-- Password input -->
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="palabraSecreta">Contraseña</label>
-                            <input type="password" id="palabraSecreta" name="palabraSecreta" class="form-control form-control-lg" />
-                        </div>
-
-                        <div class="d-flex justify-content-around align-items-center mb-4">
-                            <!-- Checkbox -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" name="recuerdame" id="recuerdame" checked />
-                                <label class="form-check-label" for=""> Recuérdame</label>
+                                        <!-- Submit button -->
+                                        <button type="submit" class="btn btn-success btn-block">Entrar</button>
+                                        <hr>
+                                        <p class="text-center">¿Aún no eres miembro?
+                                            <a data-toggle="tab" data-target="#tab2" class="text-success" href="#" >
+                                                <br>Regístrate</a>
+                                        </p>
+                                    </form>
+                                </div>
                             </div>
-
-                            <a href="#" class="text-success">Olvidé la contraseña</a>
+                            <!-- Registro -->
+                            <div class="tab-pane" id="tab2">
+                                <div class="col ">
+                                    <!-- Formulario  -->
+                                    <form>
+                                        <!-- Nombre input -->
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="correo ">Nombre</label>
+                                            <input type="text" id=" " name=" " class="form-control" placeholder="Ingresa tu nombre" required>
+                                        </div>
+                                        <!-- Doble columna -->
+                                        <div class="form-row mb-3 ">
+                                            <div class="col">
+                                                <!-- Genero -->
+                                                <div class="form-outline">
+                                                    <label class="form-label " for=" ">Género</label>
+                                                    <select id=" " class="form-control" required>
+                                                        <option selected value="0 ">Elegir</option>
+                                                        <option>Masculino</option>
+                                                        <option>Femenino</option>
+                                                        <option>Prefiero no decir</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <!-- Fecha de nacimiento -->
+                                                <label class="form-label" for=" ">Fecha de nacimiento</label>
+                                                <input type="date" id="birthday" name="birthday" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <!-- Email input -->
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="correo ">Correo</label>
+                                            <input type="email " id="correo " name="correo " class="form-control" placeholder="Ingresa tu correo " required/>
+                                        </div>
+                                        <!-- Password input -->
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="palabraSecreta">Contraseña</label>
+                                            <input type="password" id="palabraSecreta" name="palabraSecreta" class="form-control" placeholder="Ingresa una contraseña" required/>
+                                        </div>
+                                        <!-- Submit button -->
+                                        <div class="form-outline">
+                                            <button type="submit" class="btn btn-info btn-block">Registrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- fin Registro -->
                         </div>
-
-                        <!-- Submit button -->
-                        <button type="submit" class="btn btn-success btn-lg btn-block">Entrar</button>
-                        <hr>
-                        <p class="text-center">¿Aún no eres miembro?
-                            <a data-toggle="tab" class="text-success" href="#">
-                                <br>Regístrate</a>
-                        </p>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
-    <div class="container">
-        <hr>
         <footer>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2022 Farmacia. Todos los derechos reservados.</p>
+            <div class="container ">
+                <hr>
+                <div class="row ">
+                    <div class="col-12 text-center ">
+                        <p>&copy; 2022 Farmacia. Todos los derechos reservados.</p>
+                    </div>
                 </div>
             </div>
         </footer>
-    </div>
 </body>
 </html>

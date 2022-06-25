@@ -7,30 +7,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dash</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success mb-3">
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-info mb-3">
     <div class="flex-row d-flex">
         <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
+        <a class="navbar-brand" href="#"><i class="bi bi-person-circle"></i> Administrador</a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -46,10 +47,10 @@
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
+                <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="" data-target="#myModal" data-toggle="modal">About</a>
+                <a class="nav-link" href="#"><i class="bi bi-x-square"></i> Cerrar sesión</a>
             </li>
         </ul>
     </div>
@@ -57,8 +58,10 @@
 <div class="container-fluid" id="main">
     <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
-            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
-                <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
+            <ul class="nav flex-column sticky-top pl-0 pt-3 mt-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">General</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Reports▾</a>
                     <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
@@ -77,19 +80,10 @@
         </div>
         <!--/col-->
 
-        <div class="col main pt-5 mt-3">
-            <h1 class="display-4 d-none d-sm-block">
-            Bootstrap 4 Dashboard
-            </h1>
+        <div class="col main pt-3 mt-3">
+            <h1 class="display-4 d-none d-sm-block">Dashboard</h1>
             <p class="lead d-none d-sm-block">Plus off-canvas sidebar, based on Bootstrap v4</p>
 
-            <div class="alert alert-warning fade collapse" role="alert" id="myAlert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">Close</span>
-                </button>
-                <strong>Holy guacamole!</strong> It's free.. this is an example theme.
-            </div>
             <div class="row mb-3">
                 <div class="col-xl-3 col-sm-6 py-2">
                     <div class="card bg-success text-white h-100">
@@ -170,24 +164,7 @@
                 sizes.
             </p>
             <div class="row my-4">
-                <div class="col-lg-3 col-md-4">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="//placehold.it/740x180/bbb/fff?text=..." alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">Layouts</h4>
-                            <p class="card-text">Flexbox provides simpler, more flexible layout options like vertical centering.</p>
-                            <a href="#" class="btn btn-primary">Button</a>
-                        </div>
-                    </div>
-                    <div class="card card-inverse bg-inverse mt-3">
-                        <div class="card-body">
-                            <h3 class="card-title">Flexbox</h3>
-                            <p class="card-text">Flexbox is now the default, and Bootstrap 4 supports SASS out of the box.</p>
-                            <a href="#" class="btn btn-outline-secondary">Outline</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-8">
+                <div class="col-12">
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead class="thead-inverse">
@@ -544,10 +521,6 @@
     </div>
 
 </div>
-<!--/.container-->
-<footer class="container-fluid">
-    <p class="text-right small">©2016-2018 Company</p>
-</footer>
 
 
 <!-- Modal -->
